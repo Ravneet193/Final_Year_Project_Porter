@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".PnrEntryActivity">
+
+
+    <EditText
+        android:id="@+id/pnrEntry"
+        android:layout_width="323dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:hint="Enter PNR"
+        android:inputType="textPersonName"
+        android:layout_marginLeft="25dp"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/startTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="Start Trip"
+        android:layout_marginLeft="130dp"
+
+        android:textAlignment="center" />
+
+
+    <TextView
+        android:id="@+id/UserDropDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="73dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/proceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Proceed" />
+</LinearLayout>

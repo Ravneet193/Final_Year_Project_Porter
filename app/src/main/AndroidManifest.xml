@@ -25,7 +25,9 @@
         <activity android:name=".TripsMenuActivity" />
         <activity android:name=".UserProfileActivity" />
         <activity android:name=".FeedbackActivity" />
-        <activity android:name=".TripHistory"></activity>
+        <activity android:name=".TripHistory"/>
+        <activity android:name=".PnrEntryActivity"/>
+        <activity android:name=".MapActivity"/>
     </application>
 
 </manifest>
