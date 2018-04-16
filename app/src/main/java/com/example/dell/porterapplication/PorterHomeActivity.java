@@ -97,8 +97,8 @@ public class PorterHomeActivity extends AppCompatActivity implements NavigationV
         int id = item.getItemId();
         if(id == R.id.logoutMenu){
             finish();
-            Intent intent = new Intent(PorterHomeActivity.this,MainActivity.class);
-            startActivity(intent);
+            //Intent intent = new Intent(PorterHomeActivity.this,MainActivity.class);
+            //startActivity(intent);
         }
         if(id == R.id.profileMenu){
             Intent intent = new Intent(PorterHomeActivity.this,UserProfileActivity.class);
@@ -106,7 +106,7 @@ public class PorterHomeActivity extends AppCompatActivity implements NavigationV
             startActivityForResult(intent, 1);
         }
         if(id == R.id.PorterRatingsMenu){
-            Intent intent = new Intent(PorterHomeActivity.this,PorterRatingActivity.class);
+            Intent intent = new Intent(PorterHomeActivity.this,CardPayment.class);
             startActivity(intent);
         }
         if(id == R.id.TripsMenu){

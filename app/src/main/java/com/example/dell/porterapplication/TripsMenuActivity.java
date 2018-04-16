@@ -4,8 +4,10 @@ package com.example.dell.porterapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class TripsMenuActivity extends AppCompatActivity {
 
@@ -15,16 +17,17 @@ public class TripsMenuActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tripsmenu);
-        GoHome = findViewById(R.id.GoHome);
-        GoHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(TripsMenuActivity.this,PorterHomeActivity.class);
-                startActivity(intent);
-            }
-        });
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
     }
 
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Toast.makeText(this, "Back ", Toast.LENGTH_SHORT).show();
+        finish();
+        return true;
+    }
+
 }
+
+

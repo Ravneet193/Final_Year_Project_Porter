@@ -3,12 +3,14 @@ package com.example.dell.porterapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,15 +29,7 @@ public class HelpMenuActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_helpmenu);
-        GoHome = findViewById(R.id.GoHome);
-        GoHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Intent intent = new Intent(HelpMenuActivity.this, PorterHomeActivity.class);
-                //startActivity(intent);
-                finish();
-            }
-        });
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         expandableListView = findViewById(R.id.expandableListView);
         fillData();
@@ -99,5 +93,10 @@ public class HelpMenuActivity extends AppCompatActivity {
         helpAnswer.put(helpQuestion.get(3),Qtn4);
         helpAnswer.put(helpQuestion.get(4),Qtn5);
         helpAnswer.put(helpQuestion.get(5),Qtn6);
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Toast.makeText(this, "Back ", Toast.LENGTH_SHORT).show();
+        finish();
+        return true;
     }
 }

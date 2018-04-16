@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,6 +32,7 @@ public class FeedbackActivity extends AppCompatActivity {
         db = dbHelper.getWritableDatabase();
 
         Toast.makeText(this, "Feedback Page", Toast.LENGTH_SHORT).show();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
        mRatingBar = (RatingBar) findViewById(R.id.ratingBar);
         mRatingScale = (TextView) findViewById(R.id.tvRatingScale);
@@ -98,6 +100,12 @@ public class FeedbackActivity extends AppCompatActivity {
         {
             Toast.makeText(this, "Feedback Failed", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Toast.makeText(this, "Back ", Toast.LENGTH_SHORT).show();
+        finish();
+        return true;
     }
 
 }
